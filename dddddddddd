@@ -50,6 +50,11 @@ function module:start()
     local UIListLayout = Instance.new("UIListLayout")
     local UIPadding = Instance.new("UIPadding")
 
+    local Rejoin = Instance.new("TextButton")
+    local UICorner_4 = Instance.new("UICorner")
+    local ServerHop = Instance.new("TextButton")
+    local UICorner_5 = Instance.new("UICorner")
+
     -- Setup DepthOfField
     local BLUR_OBJ = Instance.new("DepthOfFieldEffect")
     BLUR_OBJ.FarIntensity = 0
@@ -233,6 +238,40 @@ function module:start()
     UserContainerCorner.CornerRadius = UDim.new(0, 4)
     UserContainerCorner.Parent = UserContainer
 
+    Rejoin.Name = "Rejoin"
+    Rejoin.Parent = UserContainer
+    Rejoin.AnchorPoint = Vector2.new(1, 0.5)
+    Rejoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Rejoin.BackgroundTransparency = 0.900
+    Rejoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Rejoin.BorderSizePixel = 0
+    Rejoin.Position = UDim2.new(1, -5, 0.5, 0)
+    Rejoin.Size = UDim2.new(0, 105, 0, 18)
+    Rejoin.Font = Enum.Font.Unknown
+    Rejoin.Text = "Rejoin"
+    Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Rejoin.TextSize = 14.000
+
+    UICorner_4.CornerRadius = UDim.new(0, 6)
+    UICorner_4.Parent = Rejoin
+
+    ServerHop.Name = "ServerHop"
+    ServerHop.Parent = UserContainer
+    ServerHop.AnchorPoint = Vector2.new(1, 0.5)
+    ServerHop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    ServerHop.BackgroundTransparency = 0.900
+    ServerHop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    ServerHop.BorderSizePixel = 0
+    ServerHop.Position = UDim2.new(1, -120, 0.5, 0)
+    ServerHop.Size = UDim2.new(0, 105, 0, 18)
+    ServerHop.Font = Enum.Font.Unknown
+    ServerHop.Text = "Server Hop"
+    ServerHop.TextColor3 = Color3.fromRGB(255, 255, 255)
+    ServerHop.TextSize = 14.000
+
+    UICorner_5.CornerRadius = UDim.new(0, 6)
+    UICorner_5.Parent = ServerHop
+
     UserIcon.Name = "UserIcon"
     UserIcon.Parent = UserContainer
     UserIcon.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -252,7 +291,7 @@ function module:start()
     UserLabel.Position = UDim2.new(-0.01514, 45, 0.5, 0)
     UserLabel.Size = UDim2.new(0, 542, 0, 16)
     UserLabel.FontFace = Font.new("rbxassetid://12187365977")
-    UserLabel.Text = "Welcome <b>" .. Players.LocalPlayer.Name .. "</b>! This script is still in beta, if you find any bugs feel free to report them"
+    UserLabel.Text = "Welcome <b>" .. Players.LocalPlayer.Name .. "</b>!"
     UserLabel.TextColor3 = Color3.fromRGB(228, 228, 228)
     UserLabel.TextSize = 14
     UserLabel.TextXAlignment = Enum.TextXAlignment.Left
