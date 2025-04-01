@@ -1,4 +1,4 @@
---[[racism is good for society]]--
+--[[ezz]]--
 
 local module = {}
 
@@ -247,10 +247,13 @@ function module:start()
     Rejoin.BorderSizePixel = 0
     Rejoin.Position = UDim2.new(1, -5, 0.5, 0)
     Rejoin.Size = UDim2.new(0, 105, 0, 18)
-    Rejoin.Font = Enum.Font.Unknown
+    Rejoin.FontFace = Font.new("rbxassetid://12187365977")
     Rejoin.Text = "Rejoin"
     Rejoin.TextColor3 = Color3.fromRGB(255, 255, 255)
     Rejoin.TextSize = 14.000
+    Rejoin.MouseButton1Click:Connect(function()
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId, Players.LocalPlayer)
+    end)
 
     UICorner_4.CornerRadius = UDim.new(0, 6)
     UICorner_4.Parent = Rejoin
@@ -264,10 +267,14 @@ function module:start()
     ServerHop.BorderSizePixel = 0
     ServerHop.Position = UDim2.new(1, -120, 0.5, 0)
     ServerHop.Size = UDim2.new(0, 105, 0, 18)
-    ServerHop.Font = Enum.Font.Unknown
+    ServerHop.FontFace = Font.new("rbxassetid://12187365977")
     ServerHop.Text = "Server Hop"
     ServerHop.TextColor3 = Color3.fromRGB(255, 255, 255)
     ServerHop.TextSize = 14.000
+
+    function start:ServerHopCallback(callback)
+        ServerHop.MouseButton1Click:Connect(callback)
+    end
 
     UICorner_5.CornerRadius = UDim.new(0, 6)
     UICorner_5.Parent = ServerHop
