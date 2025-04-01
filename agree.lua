@@ -1,4 +1,4 @@
---[[ezz]]--
+--[[racism is good for society]]--
 
 local module = {}
 
