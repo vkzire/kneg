@@ -399,7 +399,7 @@ function Radix.CreateSlider(tab, config)
     local progress = create("Frame", {
         Name = "Progress",
         Size = UDim2.new(0, 0, 1, 0),
-        BackgroundColor3 =  = Color3.fromRGB(51, 139, 221),
+        BackgroundColor3 =  Color3.fromRGB(51, 139, 221),
         BorderSizePixel = 0,
         Parent = main
     })
